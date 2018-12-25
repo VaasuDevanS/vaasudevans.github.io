@@ -1,18 +1,63 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
    <title> Vaasudevan Srinivasan </title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" href="static/images/favicon.png">
    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-   <link rel="stylesheet" href="static/css/leaflet.min.css">
+   <link rel="stylesheet" href="static/css/leaflet.css">
+   <style>
+      a:hover {cursor: pointer; font-weight:bold}
+   </style>
 </head>
-<body>
-    <script src="static/js/jquery.min.js"> </script>
-    <script src="static/js/popper.min.js"> </script>
-    <script src="static/js/bootstrap.min.js"> </script>
-    <script src="static/js/leaflet.js"> </script>
+<body style="text-align:center">
+   <script src="static/js/jquery.min.js"> </script>
+   <script src="static/js/popper.min.js"> </script>
+   <script src="static/js/bootstrap.min.js"> </script>
+   <script src="static/js/leaflet.js"> </script>
 
-    Hello world;
+   <div class="container" style="padding-top:2px">
+   <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <a class="navbar-brand">Vaasudevan Srinivasan</a>
+         </div>
+         <ul class="nav navbar-nav">
+            <li class="active"><a><b>About me</b></a></li>
+            <li><a href="Works.html"><b>My Works</b></a></li>
+            <li><a href=""><b>Résumé</b></a></li>
+         </ul>
+      </div>
+   </nav>
+
+   <div class="row">
+      <div class="col-sm-6" style="text-align:left">
+         <p style="font-family: ubuntu; font-size:20px;">
+             Hi..!!<br> I'm Vaasu<br>
+             Skills: Python, Opensource-GIS, GNU-coreutils <br><br>
+             Areas of Interest: <br>
+             * Natural Language Processing <br>
+             * Total Quality Management <br><br>
+             I am: <br>
+             * doing Masters in Geodesy and Geomatics at 
+             <a href="https://www.unb.ca/">UNB</a> <br>
+             * a Bibliophile <br>
+         </p>
+      </div>
+      <div class="col-sm-6" style="text-align:right">
+         <div id="map" style="width:500px; height:400px; float:right"> </div>
+      </div>
+   </div>
+
+   <script>
+      var map = L.map("map").setView([11.342423, 77.728165], 3)
+      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:"&copy; OSM",
+      }).addTo(map);
+      L.control.scale().addTo(map);
+      L.marker([11.342423, 77.728165]).addTo(map)
+   </script>
 
 </body>
 </html>
