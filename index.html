@@ -16,7 +16,6 @@
    <script src="static/js/popper.min.js"> </script>
    <script src="static/js/bootstrap.min.js"> </script>
    <script src="static/js/leaflet.js"> </script>
-
    <div class="container" style="padding-top:2px">
    <nav class="navbar navbar-inverse">
       <div class="container-fluid">
@@ -24,13 +23,14 @@
             <a class="navbar-brand">Vaasudevan Srinivasan</a>
          </div>
          <ul class="nav navbar-nav">
-            <li class="active"><a><b>About me</b></a></li>
-            <li><a href="Works.html"><b>My Works</b></a></li>
-            <li><a href=""><b>Résumé</b></a></li>
+            <li id="A"><a onclick="About()"><b>About me</b></a></li>
+            <li id="W"><a onclick="Works()"><b>Works</b></a></li>
+            <li><a href="static/Resume.pdf" target="_blank"><b>Résumé</b></a></li>
          </ul>
       </div>
    </nav>
-
+   <div id="body-content"> </div>
+   <div id="about" hidden>
    <div class="row">
       <div class="col-sm-6" style="text-align:left">
          <p style="font-family: ubuntu; font-size:20px;">
@@ -38,26 +38,130 @@
              Skills: Python, Opensource-GIS, GNU-coreutils <br><br>
              Areas of Interest: <br>
              * Natural Language Processing <br>
-             * Total Quality Management <br><br>
-             I am: <br>
-             * doing Masters in Geodesy and Geomatics at 
-             <a href="https://www.unb.ca/">UNB</a> <br>
-             * a Bibliophile <br>
+             * GIS, Image processing <br>
+             * Total Quality Management
+             --------------------------------------------------------------------------------------------<br>
+             * Inspiration: <a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a> <br>
+             * Actors: <a href="https://www.imdb.com/name/nm1212722/" target="_blank">Benedict Cumberbatch</a>,
+                       <a href="https://www.imdb.com/name/nm0352032/" target="_blank">Kamal Haasan</a><br>
+             * Directors: <a href="https://www.imdb.com/name/nm0634240/" target="_blank">Christopher Nolan</a>, 
+                          <a href="https://www.imdb.com/name/nm0049335/" target="_blank">Balachander</a>,
+                          <a href="https://www.imdb.com/name/nm0080180/" target="_blank">Bhagyaraj</a><br>
+             * Music: <a href="https://en.wikipedia.org/wiki/Ilaiyaraaja" target="_blank">Ilaiyaraaja</a><br>
+             * Authors: <a href="https://en.wikipedia.org/wiki/Kalki_Krishnamurthy" target="_blank">Kalki</a>,
+                        <a href="https://en.wikipedia.org/wiki/Thiruvalluvar" target="_blank">Thiruvalluvar</a><br>
+             * Books: <a href="https://en.wikipedia.org/wiki/Ponniyin_Selvan" target="_blank">Ponniyin selvan</a>,
+                      <a href="https://en.wikipedia.org/wiki/Silappatikaram" target="_blank">Silappatikaram</a>, Alai Osai <br>
+             * <a href="https://en.wikipedia.org/wiki/DC_Universe" target="_blank">DC</a>, 
+               <a href="https://en.wikipedia.org/wiki/Arrowverse" target="_blank">Arrowverse</a><br>
          </p>
       </div>
       <div class="col-sm-6" style="text-align:right">
+         <a onclick="(new About()).Nativeplace()"> Native </a> |
+         <a onclick="(new About()).Bachelors()"> Bachelors </a> |
+         <a onclick="(new About()).Masters()"> Masters </a> |
+         <a onclick="(new About()).IAS()"> IAS Fellowship </a> |
+         <a onclick="(new About()).Intern()"> Part-time Intern </a> <br><br>
          <div id="map" style="width:500px; height:400px; float:right"> </div>
       </div>
+   </div> <br>
+   <a href="https://github.com/VaasuDevanS" target="_blank">Github page</a>
    </div>
-
+   <div id="works" hidden>
+   <div style="text-align: left">
+      <table class="table table-hover" style="font-size:17px;">
+          <tr>
+              <th scope="row"> 2018 </th>
+              <td> Sep to Mar 2019<br>Dec<br>Aug<br>April<br><br>Mar to May</td>
+              <td> 3D model Reconstruction of Abdera site - Link: 
+                   <a href="http://abdera.pythonanywhere.com/" target="_blank">abdera.pythonanywhere.com</a><br>
+                   Renewable energy Site Assessment 
+                   (<a href="http://renewsites.pythonanywhere.com/" target="_blank">Link</a>), 
+                   Natural Language processing assignments
+                   (<a href="https://github.com/VaasuDevanS/Natural-Language-Processing-Assignments" target="_blank">Github</a>)<br>
+                   Implementation of codaQback project using Django, Bokeh - 
+                   Link: <a href="http://codaqback.pythonanywhere.com" target="_blank">codaqback.pythonanywhere.com</a><br>
+                   WebGIS portal for Ponneri Taluk using Django, Leaflet - Link: 
+                   <a href="http://vis.pythonanywhere.com" target="_blank">vis.pythonanywhere.com</a> (Username:user | Password:123)
+                   <br> Implementation of Hardy-cross 
+                   (<a href="https://github.com/VaasuDevanS/HardyCross-Sample-Problem-Implementation" target="_blank">Github</a> |
+                   <a href="https://hardycross.000webhostapp.com/" target="_blank">Link</a>), 
+                   Routing for Solidwaste manegement 
+                   (<a href="https://github.com/VaasuDevanS/Routing-for-SolidWaste-Management" target="_blank">Github</a>)
+                   <br> GIS Developer dealing PostGIS, QGIS, Python
+              </td> 
+          </tr>
+              <th scope="row"> 2017 </th>
+              <td> July to Feb 2018<br>May, June<br>Oct<br>Feb</td>
+              <td> Generation of LocationRisk and RouteRisk models using GRASS GIS, Python<br>
+                   Visualization and Computation of codaQback for Seismic wave
+                   using python-tkinter, matplotlib, scipy<br>
+                   Cowsay python module - <a href="https://pypi.org/project/cowsay/" target="_blank">PyPi</a><br>
+                   Python module for Periodic table elements - 
+                   <a href="https://pypi.org/project/PeriodicElements/" target="_blank">PyPi</a>
+              </td>
+          </tr>
+          <tr>
+              <th scope="row"> 2016 </th>
+              <td> Dec </td>
+              <td> Software to store Lyrics scraped from internet using python-tkinter, requests
+                   <a href="https://github.com/VaasuDevanS/Lyrics" target="_blank">Github-Link</a>
+              </td>
+          </tr>
+      </table>
+   </div>
+   </div>
+   </div> <!-- container -->
    <script>
-      var map = L.map("map").setView([11.342423, 77.728165], 3)
-      L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:"&copy; OSM",
-      }).addTo(map);
-      L.control.scale().addTo(map);
-      L.marker([11.342423, 77.728164]).addTo(map)
+      function About(){
+         $("#W").removeClass("active");
+         $("#A").addClass("active");
+         $("#body-content").html($("#about").html());
+         var map = L.map("map").setView([35, 9], 1)
+         L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                attribution:"&copy; OSM",
+         }).addTo(map);
+         L.control.scale().addTo(map);
+         this.Nativeplace = function(){
+             coords = [11.34243, 77.728165]
+             content = "Erode, Tamilnadu"
+             map.setView(coords, 9)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+         this.Bachelors = function(){
+             coords = [13.008305, 80.233473]
+             content = "<a href='https://annauniv.edu/' target='_blank'>Anna university, Chennai</a><br>BE GeoInformatics 2014-2018"
+             map.setView(coords, 15)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+         this.Masters = function(){
+             coords = [45.945644, -66.640901]
+             content = "<a href='https://www.unb.ca/' target='_blank'>University of New Brunswick</a><br>ME Geodesy and Geomatics"
+             content += "<br>2018 to present"
+             map.setView(coords, 15)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+         this.IAS = function(){
+             coords = [26.696538, 92.83503]
+             content = "Summer fellowship selected by <a href='https://www.ias.ac.in/' target='_blank'>IAS</a><br>"
+             content += "<a href='http://www.tezu.ernet.in/' target='_blank'>Tezpur university, Assam</a> - May,June 2017"
+             map.setView(coords, 15)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+         this.Intern = function(){
+             coords = [13.038056, 80.252821]
+             content = "<a href='http://www.kcubeconsulting.com' target='_blank'>kCube Consultancy services, Chennai</a><br>"
+             content += "Part time GIS Developer- July,2017 to Jan 2018"
+             map.setView(coords, 16)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+      }
+      function Works() {
+         $("#A").removeClass("active");
+         $("#W").addClass("active");
+         $("#body-content").html($("#works").html());
+      }
+      $(function(){About()});
    </script>
-
 </body>
 </html>
