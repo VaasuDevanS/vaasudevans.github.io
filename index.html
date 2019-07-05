@@ -65,11 +65,13 @@
          </p>
       </div>
       <div class="col-sm-6" style="text-align:right">
-         <a onclick="(new About()).Nativeplace()"> Native </a> |
-         <a onclick="(new About()).Bachelors()"> Bachelors </a> |
-         <a onclick="(new About()).IAS()"> IAS Fellowship </a> |
-         <a onclick="(new About()).Intern()"> Part-time Intern </a> |
-         <a onclick="(new About()).Masters()"> Masters </a> <br><br>
+         <a onclick="(new About()).Nativeplace()"> Native</a> |
+         <a onclick="(new About()).Bachelors()"> Bachelors</a> |
+         <a onclick="(new About()).IAS()"> IAS Fellowship</a> |
+         <a onclick="(new About()).Intern()"> GIS-dev (part-time)</a> |
+         <a onclick="(new About()).Masters()"> Masters</a> |
+         <a onclick="(new About()).CoOp()"> CoOp</a>
+         <br><br>
          <div id="map" style="width:500px; height:400px; float:right"> </div>
       </div>
    </div> <br><br>
@@ -157,36 +159,43 @@
                 attribution:"&copy; OSM",
          }).addTo(map);
          L.control.scale().addTo(map);
-         this.Nativeplace = function(){
+         this.Nativeplace = function() {
              coords = [11.34243, 77.728165]
              content = "Erode, Tamilnadu, India"
              map.setView(coords, 9)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
-         this.Bachelors = function(){
+         this.Bachelors = function() {
              coords = [13.008305, 80.233473]
              content = "<a href='https://annauniv.edu/' target='_blank'>Anna university, Chennai, India</a><br>BE GeoInformatics (2014 to 2018)"
              map.setView(coords, 15)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
-         this.Masters = function(){
+         this.Masters = function() {
              coords = [45.945644, -66.640901]
              content = "<a href='https://www.unb.ca/' target='_blank'>University of New Brunswick, Canada</a><br>ME Geodesy and Geomatics"
-             content += " (2018 to present)"
+             content += " (Sep 2018 to Dec 2019)"
              map.setView(coords, 15)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
-         this.IAS = function(){
+         this.IAS = function() {
              coords = [26.696538, 92.83503]
              content = "Summer fellowship selected by <a href='https://www.ias.ac.in/' target='_blank'>IAS</a><br>"
              content += "<a href='http://www.tezu.ernet.in/' target='_blank'>Tezpur university, Assam, India</a><br>May, June 2017"
              map.setView(coords, 15)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
-         this.Intern = function(){
+         this.Intern = function() {
              coords = [13.038056, 80.252821]
              content = "<a href='http://www.kcubeconsulting.com' target='_blank'>kCube Consultancy services, Chennai, India</a><br>"
              content += "Part time GIS Developer- July,2017 to Feb,2018"
+             map.setView(coords, 16)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+         this.CoOp = function() {
+             coords = [45.961096, -66.640798]
+             content = "<a href='https://www.nbpower.com/Welcome.aspx' target='_blank'>NBPower, Fredericton-Canada</a><br>"
+             content += "GIS (Asset Management) - May to Aug,2019"
              map.setView(coords, 16)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
