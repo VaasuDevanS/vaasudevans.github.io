@@ -34,7 +34,7 @@
    <div class="row">
       <div class="col-sm-6" style="text-align:left">
          <p style="font-family: ubuntu; font-size:18.4px;">
-             Hi..!!<br> I'm Vaasu<br>
+             Hi..!!<br> You can call me Vaasu<br>
              Author of <a href="https://github.com/VaasuDevanS/cowsay-python" target="_blank">cowsay</a>
              <a href="https://pepy.tech/project/cowsay" target="_blank">
                  <img src="https://pepy.tech/badge/cowsay"></a> |
@@ -69,18 +69,21 @@
          <a onclick="(new About()).Nativeplace()"> Native</a> |
          <a onclick="(new About()).Bachelors()"> Bachelors</a> |
          <a onclick="(new About()).IAS()"> IAS Fellowship</a> |
-         <a onclick="(new About()).Intern()"> GIS-dev (part-time)</a> |
+         <a onclick="(new About()).Intern()"> GISDeveloper (Part-time)</a> |
          <a onclick="(new About()).Masters()"> Masters</a> |
-         <a onclick="(new About()).CoOp()"> CoOp</a>
+         <a onclick="(new About()).CoOp()"> CoOp</a> |
+		 <a onclick="(new About()).SS()"> GeomaticsAnalyst</a>
          <br><br>
          <div id="map" style="width:500px; height:400px; float:right"> </div>
       </div>
    </div> <br><br>
    <a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
+   <a href="https://lichess.org/@/vaasuS" target="_blank">Lichess</a> -
    <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
    <a href="http://vaasus.pythonanywhere.com/" target="_blank">Pythonanywhere</a> -
    <a href="https://vaasudevans.github.io/Maps/" target="_blank">Maps</a> -
    <a href="https://www.linkedin.com/in/vaasudevan-srinivasan/" target="_blank">LinkedIn</a>
+   
    <!-- <br>&#169; 1996 to 2019 -->
    </div>
    <div id="works" hidden>
@@ -155,10 +158,13 @@
       </table>
    </div><br><br>
    <a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
+   <a href="https://lichess.org/@/vaasuS" target="_blank">Lichess</a> -
    <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
    <a href="http://vaasus.pythonanywhere.com/" target="_blank">Pythonanywhere</a> -
    <a href="https://vaasudevans.github.io/Maps/" target="_blank">Maps</a> -
    <a href="https://www.linkedin.com/in/vaasudevan-srinivasan/" target="_blank">LinkedIn</a>
+   
+   <br><br>
    <!-- <br>&#169; 1996 to 2019 -->
    </div>
    </div> <!-- container -->
@@ -176,13 +182,13 @@
          L.control.scale().addTo(map);
          this.Nativeplace = function() {
              coords = [11.34243, 77.728165]
-             content = "Erode, Tamilnadu, India"
+             content = "Erode, Tamilnadu-India"
              map.setView(coords, 9)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
          this.Bachelors = function() {
              coords = [13.008305, 80.233473]
-             content = "<a href='https://annauniv.edu/' target='_blank'>Anna university, Chennai, India</a><br>BE GeoInformatics (2014 to 2018)"
+             content = "<a href='https://annauniv.edu/' target='_blank'>Anna university, Chennai-India</a><br>BE GeoInformatics (2014 to 2018)"
              map.setView(coords, 15)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
@@ -196,13 +202,13 @@
          this.IAS = function() {
              coords = [26.696538, 92.83503]
              content = "Summer fellowship selected by <a href='https://www.ias.ac.in/' target='_blank'>IAS</a><br>"
-             content += "<a href='http://www.tezu.ernet.in/' target='_blank'>Tezpur university, Assam, India</a><br>May, June 2017"
+             content += "<a href='http://www.tezu.ernet.in/' target='_blank'>Tezpur university, Assam-India</a><br>May, June 2017"
              map.setView(coords, 15)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
          this.Intern = function() {
              coords = [13.038056, 80.252821]
-             content = "<a href='http://www.kcubeconsulting.com' target='_blank'>kCube Consultancy services, Chennai, India</a><br>"
+             content = "<a href='http://www.kcubeconsulting.com' target='_blank'>kCube Consultancy services, Chennai-India</a><br>"
              content += "Part time GIS Developer- July,2017 to Feb,2018"
              map.setView(coords, 16)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
@@ -211,6 +217,13 @@
              coords = [45.961096, -66.640798]
              content = "<a href='https://www.nbpower.com/Welcome.aspx' target='_blank'>NBPower, Fredericton-Canada</a><br>"
              content += "GIS (Asset Management) - May to Aug,2019"
+             map.setView(coords, 16)
+             L.popup().setLatLng(coords).setContent(content).openOn(map);
+         }
+		 this.SS = function() {
+             coords = [45.945681, -66.638209]
+             content = "<a href='https://scenesharp.com/' target='_blank'>SceneSharp, Fredericton-Canada</a><br>"
+             content += "Remote Sensing Analyst and Developer - Jan 2020 to current"
              map.setView(coords, 16)
              L.popup().setLatLng(coords).setContent(content).openOn(map);
          }
