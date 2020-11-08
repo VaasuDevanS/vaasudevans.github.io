@@ -25,7 +25,6 @@
          <ul class="nav navbar-nav">
             <li id="A"><a onclick="About()"><b>About me</b></a></li>
             <li id="W"><a onclick="Works()"><b>Works</b></a></li>
-            <li id="R"><a onclick="Resume()"><b>Résumé</b></a></li>
          </ul>
       </div>
    </nav>
@@ -170,7 +169,6 @@
    <!-- <br>&#169; 1996 to 2019 -->
    </div>
    </div> <!-- container -->
-   <div id="resume" hidden><embed src="static/VaasuDevanS_Resume.pdf" style="width:100%;height:87vh"></div>
    <script>
       function About(){
          $("#W").removeClass("active");
@@ -235,12 +233,6 @@
          $("#R").removeClass("active");
          $("#W").addClass("active");
          $("#body-content").html($("#works").html());
-      }
-      function Resume() {
-         $("#A").removeClass("active");
-         $("#W").removeClass("active");
-         $("#R").addClass("active");
-         $("#body-content").html($("#resume").html());
       }
       $(function(){About()});
    </script>
