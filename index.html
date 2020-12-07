@@ -6,233 +6,303 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" href="static/images/favicon.png">
    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-   <link rel="stylesheet" href="static/css/leaflet.css">
    <style>
       a:hover {cursor: pointer; font-weight:bold}
+	  .footer {
+        position: fixed;
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+        text-align: center;
+       }
+	   .panel-body {
+	       text-align: justified;
+	   }
    </style>
 </head>
-<body style="text-align:center">
-   <script src="static/js/jquery.min.js"> </script>
-   <script src="static/js/popper.min.js"> </script>
-   <script src="static/js/bootstrap.min.js"> </script>
-   <script src="static/js/leaflet.js"> </script>
-   <div class="container" style="padding-top:2px">
-   <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-         <div class="navbar-header">
-            <a class="navbar-brand">Vaasudevan Srinivasan</a>
-         </div>
-         <ul class="nav navbar-nav">
-            <li id="A"><a onclick="About()"><b>About me</b></a></li>
-            <li id="W"><a onclick="Works()"><b>Works</b></a></li>
-         </ul>
-      </div>
-   </nav>
-   <div id="body-content"> </div>
-   <div id="about" hidden>
-   <div class="row">
-      <div class="col-sm-6" style="text-align:left">
-         <p style="font-family: ubuntu; font-size:18.4px;">
-             Hi..!!<br> You can call me Vaasu<br>
-             Author of <a href="https://github.com/VaasuDevanS/cowsay-python" target="_blank">cowsay</a>
-             <a href="https://pepy.tech/project/cowsay" target="_blank">
-                 <img src="https://pepy.tech/badge/cowsay"></a> |
-             <a href="https://github.com/VaasuDevanS/Periodic_Elements" target="_blank">periodicelements</a>
-             <a href="https://pepy.tech/project/periodicelements" target="_blank">
-                 <img src="https://pepy.tech/badge/periodicelements"></a><br>
-             Skills: Python, Opensource-GIS, GNU-coreutils <br><br>
-             <u>Areas of Interest:</u> <br>
-             * GIS, Image processing <br>
-             * Natural Language Processing <br>
-             * Total Quality Management <br> <br>
 
-             * Inspiration: <a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a> <br>
-             * Actors: <a href="https://www.imdb.com/name/nm1212722/" target="_blank">Benedict Cumberbatch</a>,
-                       <a href="https://www.imdb.com/name/nm0352032/" target="_blank">Kamal Haasan</a>,
-                       <a href="https://www.imdb.com/name/nm4043111/" target="_blank">Vijay Sethupathi</a><br>
-             * Directors: <a href="https://www.imdb.com/name/nm0634240/" target="_blank">Christopher Nolan</a>,
-                          <a href="https://www.imdb.com/name/nm0049335/" target="_blank">Balachander</a>,
-                          <a href="https://www.imdb.com/name/nm0080180/" target="_blank">Bhagyaraj</a>,
-                          <a href="https://en.wikipedia.org/wiki/Cheran_(director)" target="_blank">Cheran</a><br>
-             * Music: <a href="https://en.wikipedia.org/wiki/Ilaiyaraaja" target="_blank">Ilaiyaraaja</a><br>
-             * Authors: <a href="https://en.wikipedia.org/wiki/Kalki_Krishnamurthy" target="_blank">Kalki</a>,
-                        <a href="https://en.wikipedia.org/wiki/Thiruvalluvar" target="_blank">Thiruvalluvar</a><br>
-             * Books: <a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank">Thirukkural</a>,
-                      <a href="https://en.wikipedia.org/wiki/Ponniyin_Selvan" target="_blank">Ponniyin selvan</a>,
-                      <a href="https://en.wikipedia.org/wiki/Silappatikaram" target="_blank">Silappatikaram</a>, Alai Osai <br>
-             * <a href="https://en.wikipedia.org/wiki/DC_Universe" target="_blank">DC</a>,
-               <a href="https://en.wikipedia.org/wiki/Arrowverse" target="_blank">Arrowverse</a><br>
-         </p>
-      </div>
-      <div class="col-sm-6" style="text-align:right">
-         <a onclick="(new About()).Nativeplace()"> Native</a> |
-         <a onclick="(new About()).Bachelors()"> Bachelors</a> |
-         <a onclick="(new About()).IAS()"> IAS Fellowship</a> |
-         <a onclick="(new About()).Intern()"> GISDeveloper (Part-time)</a> |
-         <a onclick="(new About()).Masters()"> Masters</a> |
-         <a onclick="(new About()).CoOp()"> CoOp</a> |
-		 <a onclick="(new About()).SS()"> GeomaticsAnalyst</a>
-         <br><br>
-         <div id="map" style="width:500px; height:400px; float:right"> </div>
-      </div>
-   </div> <br><br>
-   <a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
-   <a href="https://leetcode.com/vaasuS/" target="_blank">LeetCode</a> -
-   <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
-   <a href="http://vaasus.pythonanywhere.com/" target="_blank">Pythonanywhere</a> -
-   <a href="https://vaasudevans.github.io/Maps/" target="_blank">Maps</a> -
-   <a href="https://www.linkedin.com/in/vaasudevan-srinivasan/" target="_blank">LinkedIn</a>
+<body>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/leaflet.js"></script>
+
+    <div class="container" style="padding-top:2px">
+        <nav class="navbar navbar-inverse">
+           <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand">Vaasudevan's Portfolio</a>
+              </div>
+              <ul class="nav navbar-nav">
+                  <li id="2020"><a onclick="Works(2020)"><b>2020</b></a></li>
+ 				  <li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
+				  <li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
+				  <li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
+				  <li id="AboutMe"><a onclick="AboutMe()"><b>About Me</b></a></li>
+              </ul>
+           </div>
+        </nav>
+        
+		<div id="body-content"> </div>
+				
+    </div>
    
-   <!-- <br>&#169; 1996 to 2019 -->
-   </div>
-   <div id="works" hidden>
-   <div style="text-align: left">
-      <table class="table table-hover" style="font-size:17px;">
-          <tr>
-              <th scope="row"> 2019 </th>
-              <td> Sep-Dec<br><br>May-Aug<br><br><br><br>Apr<br><br>Mar </td>
-              <td> Land Use Land Cover classification using ResNet50 model using Keras - 
-                   <a href="https://vaasudevans.github.io/DeepLearning/" target="_blank">View</a>
-                   <br>
-                   WebPage showing all the map products created so far
-                   <a href="https://vaasudevans.github.io/Maps/" target="_blank">View</a><br>
-                   Edmonton safe Neighbourhoods using crime data (2009 to 2018)
-                   <a href="https://vaasudevans.github.io/Edmonton-Safe-Neighbourhoods/" target="_blank">View Map</a><br>
-                   Forked <a href="https://github.com/maxwell0401/CholeraSpatialEpidemiology" target="_blank">maxwell0401/CholeraSpatialEpidemiology</a>
-                   and built <a href="https://vaasudevans.github.io/CholeraSpatialEpidemiology/" target="_blank">this</a><br>
-                   CoOp Student at <a href="https://www.nbpower.com/Welcome.aspx" target="_blank">NBPower Fredericton</a> <br>
-                   indoorGIS: WebApp for finding Faculties, Facilities, Routing and more
-                   - <a href="https://github.com/VaasuDevanS/indoorGIS" target="_blank">Github</a> |
-                   <a href="https://indoorgis.pythonanywhere.com/" target="_blank">View site</a> |
-                   <a href="https://indoorgis.readthedocs.io/en/latest/" target="_blank">Read The Docs</a>
-                   <br>
-                   thirukkural-cl: Command-line and python module for Thirukkural
-                  <a href="https://github.com/VaasuDevanS/thirukkural-cl" target="_blank">Github</a> |
-                  <a href="https://pypi.org/project/thirukkural/" target="_blank">PyPi</a> <br>
-                  Support Vector Machine Presentation (<a href="https://mybinder.org/v2/gh/VaasuDevanS/SVM-in-RemoteSensing/master?filepath=Presentation_Talk%2FSupport%20Vector%20Machine.ipynb" target="_blank">myBinder</a>)
-                   and Implementation (<a href="https://colab.research.google.com/github/vaasudevans/SVM-in-RemoteSensing/blob/master/Implementation/SupportVectorMachine.ipynb" target="_blank">Google Colab</a>)
-                   <br>
-                   KnowYourRoute using ESRI JS API 3.28 - Link: <a href="https://vaasudevans.github.io/KnowYourRoute/" target="_blank">vaasudevans.github.io/KnowYourRoute</a>
-              </td>
-          </tr>
-          <tr>
-              <th scope="row"> 2018 </th>
-              <td> Sep to Mar'19<br>Dec<br>Aug<br>April<br><br>Mar to May</td>
-              <td> 3D model Reconstruction of Abdera site - Link:
-                   <a href="https://abdera-thrace.github.io/" target="_blank">abdera-thrace.github.io</a><br>
-                   Renewable energy Site Assessment
-                   (<a href="http://renewsites.pythonanywhere.com/" target="_blank">Link</a>),
-                   Natural Language processing assignments
-                   (<a href="https://github.com/VaasuDevanS/Natural-Language-Processing-Assignments" target="_blank">Github</a>)<br>
-                   Implementation of codaQback project using Django, Bokeh -
-                   Link: <a href="http://codaqback.pythonanywhere.com" target="_blank">codaqback.pythonanywhere.com</a><br>
-                   WebGIS portal for Ponneri Taluk using Django, Leaflet - Link:
-                   <a href="http://vis.pythonanywhere.com" target="_blank">vis.pythonanywhere.com</a> (Username:user | Password:123)
-                   <br> Implementation of Hardy-cross
-                   (<a href="https://github.com/VaasuDevanS/HardyCross-Sample-Problem-Implementation" target="_blank">Github</a> |
-                   <a href="https://hardycross.000webhostapp.com/" target="_blank">Link</a>),
-                   Routing for Solidwaste management
-                   (<a href="https://github.com/VaasuDevanS/Routing-for-SolidWaste-Management" target="_blank">Github</a>)
-                   <br> GIS Developer dealing PostGIS, QGIS, Python
-              </td>
-          </tr>
-          <tr>
-              <th scope="row"> 2017 </th>
-              <td> July to Feb'18<br>May, June<br>May<br>Feb</td>
-              <td> Generation of LocationRisk and RouteRisk models using GRASS GIS, Python<br>
-                   Visualization and Computation of codaQback for Seismic wave
-                   using python-tkinter, matplotlib, scipy<br>
-                   Cowsay python module - <a href="https://pypi.org/project/cowsay/" target="_blank">PyPi</a><br>
-                   Python module for Periodic table elements -
-                   <a href="https://pypi.org/project/PeriodicElements/" target="_blank">PyPi</a>
-              </td>
-          </tr>
-          <tr>
-              <th scope="row"> 2016 </th>
-              <td> Dec </td>
-              <td> Software to store Lyrics scraped from internet using python-tkinter, requests
-                  (<a href="https://github.com/VaasuDevanS/Lyrics" target="_blank">Github</a>)
-              </td>
-          </tr>
-      </table>
-   </div><br><br>
-   <a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
-   <a href="https://leetcode.com/vaasuS/" target="_blank">LeetCode</a> -
-   <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
-   <a href="http://vaasus.pythonanywhere.com/" target="_blank">Pythonanywhere</a> -
-   <a href="https://vaasudevans.github.io/Maps/" target="_blank">Maps</a> -
-   <a href="https://www.linkedin.com/in/vaasudevan-srinivasan/" target="_blank">LinkedIn</a>
+    <div id="y2020" hidden>
+	
+	    <div class="panel panel-primary">
+		  <div class="panel-heading"><b>Remote Sensing Analyst and Developer at SceneSharp</b> <b style="float:right">MAR 2020 - PRESENT</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2020/scenesharp.png" width=240 height=90> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		</div>
+		
+	</div>
    
-   <br><br>
-   <!-- <br>&#169; 1996 to 2019 -->
-   </div>
-   </div> <!-- container -->
+   
+    <div id="y2019" hidden>
+	
+	    <div class="panel panel-primary">
+		  <div class="panel-heading"><b>Graduate Student Teaching Assistant</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/UNBGGE.gif" width=100 height=100> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="panel panel-primary">
+		  <div class="panel-heading"><b>NB Power</b> <b style="float:right">MAY - AUG 2019</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/NBPower.png" width=240 height=100> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Term-Paper: Land Use Land Cover</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/lulc.png" width=140 height=150> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://vaasudevans.github.io/DeepLearning/" target="_blank">Term Paper</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Project: indoorGIS</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/indoorGIS.png" width=230 height=150> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://indoorgis.pythonanywhere.com/" target="_blank">Launch WebApp</a> |
+			  <a href="https://github.com/VaasuDevanS/indoorGIS" target="_blank">Github</a> |
+			  <a href="https://indoorgis.readthedocs.io/en/latest/" target="_blank">Documentation</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Project: Cholera Spatial Epidemiology</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/cholera.png" width=230 height=150> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://vaasudevans.github.io/CholeraSpatialEpidemiology/" target="_blank">Launch Website</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-success">
+		  <div class="panel-heading"><b>Project: Fredericton-KnowYourRoute</b> <b style="float:right">APR 2019</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/KnowYourRoute.png" width=240 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://vaasudevans.github.io/KnowYourRoute/" target="_blank">Launch WebApp</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Command Line tool / Python-Module: thirukkural</b> <img src="https://pepy.tech/badge/thirukkural"></img> <b style="float:right">APR 2019</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2019/thirukkural.png" width=240 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://github.com/VaasuDevanS/thirukkural-cl" target="_blank">Github</a> |
+			  <a href="https://pypi.org/project/thirukkural/" target="_blank">Pypi</a> |
+			  <a href="https://pepy.tech/project/thirukkural" target="_blank">Pepy.tech</a>
+		  </div>
+		</div>
+	
+		
+	</div>
+   
+   
+    <div id="y2018" hidden>
+		    
+		<div class="panel panel-primary">
+		  <div class="panel-heading"><b>Digital Technician at the University of New Brunswick</b> <b style="float:right">SEP 2018 - MAR 2019</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2018/abdera.png" width=240 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://abdera-thrace.github.io/" target="_blank">Visit Website</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Natural Language Processing Assignments</b> <b style="float:right">FALL 2018 TERM</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2018/nlp.png" width=140 height=150> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://github.com/VaasuDevanS/Natural-Language-Processing-Assignments" target="_blank">Github</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Project: Site Assessment for Renewable Energy in New Brunswick</b> <b style="float:right">FALL 2018 TERM</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2018/renewsites.png" width=230 height=150> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://vaasudevans.github.io/RenewSites/" target="_blank">Visit Website</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Project: Village Information System</b> <b style="float:right">APR 2018</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2018/vis.png" width=240 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://vis.pythonanywhere.com/Display/Agaram/" target="_blank">Launch WebApp</a>
+		  </div>
+		</div>
+	
+	</div>
+   
+   
+    <div id="y2017" hidden>
+	
+	    <div class="panel panel-primary">
+		  <div class="panel-heading"><b>Open Source GIS Analyst and Developer at kCube Consultancy Services, Chennai-India</b> <b style="float:right">JUL 2017 - FEB 2018</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2017/kcube.jpg" width=240 height=90> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		</div>
+	    
+		<div class="panel panel-primary">
+		  <div class="panel-heading"><b>Indian Academy of Sciences Fellowship at Tezpur University, Assam-India</b> <b style="float:right">MAY - JUN 2017</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2017/codaqback.png" width=240 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://codaqback.pythonanywhere.com/" target="_blank">Launch WebApp</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-success">
+		  <div class="panel-heading"><b>Python-Module: cowsay</b> <img src="https://pepy.tech/badge/cowsay"></img> <b style="float:right">MAY 2017</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2017/cowsay.png" width=230 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://github.com/VaasuDevanS/cowsay-python" target="_blank">Github</a> |
+			  <a href="https://pypi.org/project/cowsay/" target="_blank">Pypi</a> |
+			  <a href="https://pepy.tech/project/cowsay" target="_blank">Pepy.tech</a>
+		  </div>
+		</div>
+		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Python-Module: periodicelements</b> <img src="https://pepy.tech/badge/periodicelements"></img> <b style="float:right">FEB 2017</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2017/periodicelements.png" width=230 height=130> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://github.com/VaasuDevanS/Periodic_Elements" target="_blank">Github</a> |
+			  <a href="https://pypi.org/project/PeriodicElements/" target="_blank">Pypi</a> |
+			  <a href="https://pepy.tech/project/periodicelements" target="_blank">Pepy.tech</a>
+		  </div>
+		</div>
+	
+	</div>
+   
+   
+    <div id="aboutme" hidden>
+       About Me <br>
+	   
+	   <div class="footer">
+		<a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
+        <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
+        <a href="https://www.linkedin.com/in/vaasudevan-srinivasan/" target="_blank">LinkedIn</a>
+	    </div>
+		
+    </div>
+
    <script>
-      function About(){
-         $("#W").removeClass("active");
-         $("#R").removeClass("active");
-         $("#A").addClass("active");
-         $("#body-content").html($("#about").html());
-         var map = L.map("map").setView([35, 9], 1)
-         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                attribution:"&copy; OSM",
-         }).addTo(map);
-         L.control.scale().addTo(map);
-         this.Nativeplace = function() {
-             coords = [11.34243, 77.728165]
-             content = "Erode, Tamilnadu-India"
-             map.setView(coords, 9)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
-         this.Bachelors = function() {
-             coords = [13.008305, 80.233473]
-             content = "<a href='https://annauniv.edu/' target='_blank'>Anna university, Chennai-India</a><br>BE GeoInformatics (2014 to 2018)"
-             map.setView(coords, 15)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
-         this.Masters = function() {
-             coords = [45.945644, -66.640901]
-             content = "<a href='https://www.unb.ca/' target='_blank'>University of New Brunswick, Canada</a><br>ME Geodesy and Geomatics"
-             content += " (Sep 2018 to Dec 2019)"
-             map.setView(coords, 15)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
-         this.IAS = function() {
-             coords = [26.696538, 92.83503]
-             content = "Summer fellowship selected by <a href='https://www.ias.ac.in/' target='_blank'>IAS</a><br>"
-             content += "<a href='http://www.tezu.ernet.in/' target='_blank'>Tezpur university, Assam-India</a><br>May, June 2017"
-             map.setView(coords, 15)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
-         this.Intern = function() {
-             coords = [13.038056, 80.252821]
-             content = "<a href='http://www.kcubeconsulting.com' target='_blank'>kCube Consultancy services, Chennai-India</a><br>"
-             content += "Part time GIS Developer- July,2017 to Feb,2018"
-             map.setView(coords, 16)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
-         this.CoOp = function() {
-             coords = [45.961096, -66.640798]
-             content = "<a href='https://www.nbpower.com/Welcome.aspx' target='_blank'>NBPower, Fredericton-Canada</a><br>"
-             content += "GIS (Asset Management) - May to Aug,2019"
-             map.setView(coords, 16)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
-		 this.SS = function() {
-             coords = [45.945681, -66.638209]
-             content = "<a href='https://scenesharp.com/' target='_blank'>SceneSharp, Fredericton-Canada</a><br>"
-             content += "Remote Sensing Analyst and Developer - Jan 2020 to current"
-             map.setView(coords, 16)
-             L.popup().setLatLng(coords).setContent(content).openOn(map);
-         }
+   
+      function AboutMe(){
+	     for (const val of ["#2020", "#2019", "#2018", "#2017", "#AboutMe"]) {
+		     $(val).removeClass("active");
+		 }
+		 $("#AboutMe").addClass("active");
+         $("#body-content").html($("#aboutme").html());
       }
-      function Works() {
-         $("#A").removeClass("active");
-         $("#R").removeClass("active");
-         $("#W").addClass("active");
-         $("#body-content").html($("#works").html());
+	  
+      function Works(year) {
+         for (const val of ["#2020", "#2019", "#2018", "#2017", "#AboutMe"]) {
+		     $(val).removeClass("active");
+		 }
+		 $("#"+year).addClass("active");
+         $("#body-content").html($("#y"+year).html());
       }
-      $(function(){About()});
+      $(function(){Works(2020)});
+	  
    </script>
 </body>
 </html>
