@@ -6,6 +6,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="icon" href="static/images/favicon.png">
    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+   <link rel="stylesheet" href="static/css/leaflet.css">
+   <link rel="stylesheet" href="static/css/MarkerCluster.css">
+   <link rel="stylesheet" href="static/css/MarkerCluster.Default.css">
    <style>
       a:hover {cursor: pointer; font-weight:bold}
 	  .footer {
@@ -15,9 +18,13 @@
         width: 100%;
         text-align: center;
        }
-	   .panel-body {
-	       text-align: justified;
-	   }
+	   .leaflet-container .leaflet-control-mouseposition {
+         background-color: rgba(255, 255, 255, 0.7);
+         box-shadow: 0 0 5px #bbb;
+         margin: 7.5px;
+         color: #333;
+         font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
    </style>
 </head>
 
@@ -27,6 +34,8 @@
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/leaflet.js"></script>
+    <script src="static/js/leaflet.markercluster.js"></script>
+    <script src="static/js/leaflet.coordinates.js"></script>
 
     <div class="container" style="padding-top:2px">
         <nav class="navbar navbar-inverse">
@@ -58,6 +67,9 @@
 			  <div class="col-md-8"> Desc </div>
 			</div>
 		  </div>
+		  <div class="panel-footer">
+		      <a href="https://scenesharp.com/" target="_blank">Visit Company Website</a>
+		  </div>
 		</div>
 		
 	</div>
@@ -66,7 +78,7 @@
     <div id="y2019" hidden>
 	
 	    <div class="panel panel-primary">
-		  <div class="panel-heading"><b>Graduate Student Teaching Assistant</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-heading"><b>Graduate Student Teaching Assistant for the course GGE3342: Remote Sensing</b> <b style="float:right">FALL 2019 TERM</b></div>
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/UNBGGE.gif" width=100 height=100> </img> </div>
@@ -76,12 +88,15 @@
 		</div>
 		
 		<div class="panel panel-primary">
-		  <div class="panel-heading"><b>NB Power</b> <b style="float:right">MAY - AUG 2019</b></div>
+		  <div class="panel-heading"><b>GIS CoOp Student at NB Power</b> <b style="float:right">MAY - AUG 2019</b></div>
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/NBPower.png" width=240 height=100> </img> </div>
 			  <div class="col-md-8"> Desc </div>
 			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://www.nbpower.com/" target="_blank">Visit Company Website</a>
 		  </div>
 		</div>
 		
@@ -225,6 +240,9 @@
 			  <div class="col-md-8"> Desc </div>
 			</div>
 		  </div>
+		  <div class="panel-footer">
+		      <a href="http://www.kcubeconsulting.com/" target="_blank">Visit Company Website</a>
+		  </div>
 		</div>
 	    
 		<div class="panel panel-primary">
@@ -236,7 +254,8 @@
 			</div>
 		  </div>
 		  <div class="panel-footer">
-		      <a href="https://codaqback.pythonanywhere.com/" target="_blank">Launch WebApp</a>
+		      <a href="https://codaqback.pythonanywhere.com/" target="_blank">Launch WebApp</a> |
+		      <a href="https://arxiv.org/abs/2005.02776" target="_blank">View Paper</a>
 		  </div>
 		</div>
 		
@@ -274,8 +293,11 @@
    
    
     <div id="aboutme" hidden>
-       About Me <br>
-	   
+
+	    <a href="https://vaasudevans.github.io/Maps/" target="_blank">Here's the list of map products I have created so far..!!</a> <br><br>
+	   <center><h4>Map showing all places mentioned in my Portfolio</h4></center>
+	   <div id="map" style="height:400px"> </div>
+	   	   
 	   <div class="footer">
 		<a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
         <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
@@ -285,13 +307,34 @@
     </div>
 
    <script>
-   
+     
       function AboutMe(){
 	     for (const val of ["#2020", "#2019", "#2018", "#2017", "#AboutMe"]) {
 		     $(val).removeClass("active");
 		 }
 		 $("#AboutMe").addClass("active");
-         $("#body-content").html($("#aboutme").html());
+		 $("#body-content").html($("#aboutme").html());
+		 var map = L.map("map", {minZoom: 2}).setView([35, 9], 2);
+		 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: "&copy; OSM"}).addTo(map);
+		 L.control.scale().addTo(map);
+		 L.control.mousePosition().addTo(map);
+		 
+		 var markers = L.markerClusterGroup({showCoverageOnHover: false});
+		 markers.addLayer(L.marker([11.34243, 77.728165]).bindPopup('Home Town'));
+		 markers.addLayer(L.marker([13.008305, 80.233473]).bindPopup('Bachelors Degree'));
+		 markers.addLayer(L.marker([45.945644, -66.640901]).bindPopup('Masters Degree'));
+		 markers.addLayer(L.marker([26.696538, 92.83503]).bindPopup('SRFP'));
+		 markers.addLayer(L.marker([13.038056, 80.252821]).bindPopup('kCube Consultancy Services'));
+		 markers.addLayer(L.marker([45.961096, -66.640798]).bindPopup('NBPower'));
+		 markers.addLayer(L.marker([45.945681, -66.638209]).bindPopup('SceneSharp'));
+		 map.addLayer(markers);
+		 
+		 map.on('zoomend', function() {
+            markers.eachLayer(function(layer) {
+                layer.openPopup();
+            });
+        });
+		 
       }
 	  
       function Works(year) {
@@ -301,7 +344,7 @@
 		 $("#"+year).addClass("active");
          $("#body-content").html($("#y"+year).html());
       }
-      $(function(){Works(2020)});
+      $(function(){AboutMe()});
 	  
    </script>
 </body>
