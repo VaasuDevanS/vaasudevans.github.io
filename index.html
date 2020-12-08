@@ -11,19 +11,12 @@
    <link rel="stylesheet" href="static/css/MarkerCluster.Default.css">
    <style>
       a:hover {cursor: pointer; font-weight:bold}
-	  .footer {
-        position: fixed;
-        left: 0;
-        bottom: 5px;
-        width: 100%;
-        text-align: center;
-       }
-	   .leaflet-container .leaflet-control-mouseposition {
-         background-color: rgba(255, 255, 255, 0.7);
-         box-shadow: 0 0 5px #bbb;
-         margin: 7.5px;
-         color: #333;
-         font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	  .leaflet-container .leaflet-control-mouseposition {
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 0 5px #bbb;
+        margin: 7.5px;
+        color: #333;
+        font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
       }
    </style>
 </head>
@@ -48,7 +41,12 @@
  				  <li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
 				  <li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
 				  <li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
-				  <li id="AboutMe"><a onclick="AboutMe()"><b>About Me</b></a></li>
+              </ul>
+			  <ul class="nav navbar-nav navbar-right">
+			      <li id="AboutMe"><a onclick="AboutMe()"><b>About Me</b></a></li>
+			      <li><a onclick="NewTab('https://github.com/VaasuDevanS')"><b>Github</b></a></li>
+			      <li><a onclick="NewTab('https://pypi.org/user/vaasus/')"><b>PyPi</b></a></li>
+			      <li><a onclick="NewTab('https://www.linkedin.com/in/vaasudevan-srinivasan/')"><b>LinkedIn</b></a></li>
               </ul>
            </div>
         </nav>
@@ -259,6 +257,21 @@
 		  </div>
 		</div>
 		
+		<div class="panel panel-info">
+		  <div class="panel-heading"><b>Python-Module: flames</b> <img src="https://pepy.tech/badge/flames"></img> <b style="float:right">JUN 2017</b></div>
+		  <div class="panel-body">
+		    <div class="row">
+			  <div class="col-md-3"> <img src="static/images/2017/flames.png" width=150 height=160> </img> </div>
+			  <div class="col-md-8"> Desc </div>
+			</div>
+		  </div>
+		  <div class="panel-footer">
+		      <a href="https://github.com/VaasuDevanS/flames" target="_blank">Github</a> |
+			  <a href="https://pypi.org/project/flames/" target="_blank">Pypi</a> |
+			  <a href="https://pepy.tech/project/flames" target="_blank">Pepy.tech</a>
+		  </div>
+		</div>
+		
 		<div class="panel panel-success">
 		  <div class="panel-heading"><b>Python-Module: cowsay</b> <img src="https://pepy.tech/badge/cowsay"></img> <b style="float:right">MAY 2017</b></div>
 		  <div class="panel-body">
@@ -297,16 +310,14 @@
 	    <a href="https://vaasudevans.github.io/Maps/" target="_blank">Here's the list of map products I have created so far..!!</a> <br><br>
 	   <center><h4>Map showing all places mentioned in my Portfolio</h4></center>
 	   <div id="map" style="height:400px"> </div>
-	   	   
-	   <div class="footer">
-		<a href="https://github.com/VaasuDevanS" target="_blank">Github</a> -
-        <a href="https://pypi.org/user/vaasus/" target="_blank">PyPi</a> -
-        <a href="https://www.linkedin.com/in/vaasudevan-srinivasan/" target="_blank">LinkedIn</a>
-	    </div>
 		
     </div>
 
    <script>
+   
+      function NewTab(link) { 
+            window.open(link, "_blank"); 
+      } 
      
       function AboutMe(){
 	     for (const val of ["#2020", "#2019", "#2018", "#2017", "#AboutMe"]) {
