@@ -18,6 +18,17 @@
         color: #333;
         font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
       }
+	  @media (max-width: 480px){
+      .custom-brand{
+			float: left;
+			width: 160px;
+			overflow: hidden;
+			clear: left;
+			text-align: right;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		  }
+		}
    </style>
 </head>
 
@@ -34,20 +45,29 @@
         <nav class="navbar navbar-inverse">
            <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand">Vaasudevan's Portfolio</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand custom-brand" href="https://vaasudevans.github.io/">Vaasudevan's Portfolio</a>
               </div>
-              <ul class="nav navbar-nav">
-                  <li id="2020"><a onclick="Works(2020)"><b>2020</b></a></li>
- 				  <li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
-				  <li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
-				  <li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
-              </ul>
-			  <ul class="nav navbar-nav navbar-right">
-			      <li id="AboutMe"><a onclick="AboutMe()"><b>About Me</b></a></li>
-			      <li><a onclick="NewTab('https://github.com/VaasuDevanS')"><b>Github</b></a></li>
-			      <li><a onclick="NewTab('https://pypi.org/user/vaasus/')"><b>PyPi</b></a></li>
-			      <li><a onclick="NewTab('https://www.linkedin.com/in/vaasudevan-srinivasan/')"><b>LinkedIn</b></a></li>
-              </ul>
+			  
+			  <div id="navbar" class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav">
+					  <li id="2020"><a onclick="Works(2020)"><b>2020</b></a></li>
+					  <li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
+					  <li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
+					  <li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
+				  </ul>
+				  <ul class="nav navbar-nav navbar-right">
+					  <li id="AboutMe"><a onclick="AboutMe()"><b>About Me</b></a></li>
+					  <li><a onclick="NewTab('https://github.com/VaasuDevanS')"><b>Github</b></a></li>
+					  <li><a onclick="NewTab('https://pypi.org/user/vaasus/')"><b>PyPi</b></a></li>
+					  <li><a onclick="NewTab('https://www.linkedin.com/in/vaasudevan-srinivasan/')"><b>LinkedIn</b></a></li>
+				  </ul>
+			  </div>
            </div>
         </nav>
         
@@ -62,7 +82,13 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2020/scenesharp.png" width=240 height=90> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Automation of remote sensing and image processing tasks using Python.
+				  Performing research and development of Machine Learning and Deep Learning workflows.
+				  Creation and updation of training data, preparation of satellite imageries for the tasks.
+				  Development of GIS projects and Geodatabases based on the purpose and needs using ArcGIS.
+				  Technologies used:  Python (scikit-learn, rasterio, geopandas), ArcGIS, Geomatica, Pycharm, git
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -79,8 +105,10 @@
 		  <div class="panel-heading"><b>Graduate Student Teaching Assistant for the course GGE3342: Remote Sensing</b> <b style="float:right">FALL 2019 TERM</b></div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/UNBGGE.gif" width=100 height=100> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-3"> <img src="static/images/2019/UNBGGE.gif" width=110 height=100> </img> </div>
+			  <div class="col-md-9 text-justify">
+			      Handled and evaluated lab materials and assignments (software: Geomatica’18)
+			  </div>
 			</div>
 		  </div>
 		</div>
@@ -90,7 +118,12 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/NBPower.png" width=240 height=100> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Generated high quality Network dataset by integrating New Brunswick road layers from various sources.
+				  Developed ArcPy workflow to generate attributes based on spatial relations.
+				  Technologies used:  ArcGIS Desktop 10.1, Arcpy, Microsoft office package
+
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -103,7 +136,9 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/lulc.png" width=140 height=150> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Trained a ResNet50 model using EuroSAT dataset and wrote a term paper experimenting various test patch sizes for the model
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -112,11 +147,13 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Project: indoorGIS</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-heading"><b>Project: Indoor Routing Web App</b> <b style="float:right">FALL 2019 TERM</b></div>
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/indoorGIS.png" width=230 height=150> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Developed a web app for navigating between the multi-floor rooms for the Head Hall building in the UNB campus using django, geopandas and networkx
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -131,7 +168,9 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/cholera.png" width=230 height=150> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Developed a webpage from a template to display the results / work done by my UNB colleague Maxwell Kamba
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -144,7 +183,10 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/KnowYourRoute.png" width=240 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Developed a web portal that shows the commute route for the user selected points and displays accident statistics
+				  (year wise and time of the day wise) for the Fredericton city using ESRI JS API 
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -157,7 +199,10 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2019/thirukkural.png" width=240 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Python module / CL tool for the world famous tamil literary work "thirukkural".
+				  Available in Tamil, English and trans-literated English (from Tamil), display a random verse, displaying all the verses in a given chapter.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -178,7 +223,11 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2018/abdera.png" width=240 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify"> 
+			      Created interactive 3D models using the existing site layout, Terrestrial-Laser-Scanning-data, LAS datasets and developed the website.
+				  Technologies used:  Cloud Compare, Sweet Home 3D, LAStools
+
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -187,11 +236,13 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Natural Language Processing Assignments</b> <b style="float:right">FALL 2018 TERM</b></div>
+		  <div class="panel-heading"><b>Natural Language Processing Course Work</b> <b style="float:right">FALL 2018 TERM</b></div>
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2018/nlp.png" width=140 height=150> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Python scripts developed for solving the NLP course assignments and works. All assignments were done only using built-in libraries.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -204,7 +255,9 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2018/renewsites.png" width=230 height=150> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Developed a website that showcases the works done by the team and displays the sites chosen on an interactive map using Leaflet.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -217,7 +270,10 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2018/vis.png" width=240 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Django web application to display the GIS data layers for the Agaram Village.
+				  Display the demographics information and display markers for the houses which are eligible for government schemes.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -235,7 +291,11 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2017/kcube.jpg" width=240 height=90> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Generated and Analyzed Risk raster models using the spatio-temporal accidents data.
+                  Developed python and shell scripts for batch processing on the AWS cloud machine.
+                  Technologies used:  Python, GRASS, QGIS, AWS (EC2), GNU-coreutils
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -248,7 +308,9 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2017/codaqback.png" width=240 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Developed a django app to visualize the user uploaded seismic data, perform filtering, compute codaQback and download results
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -261,8 +323,11 @@
 		  <div class="panel-heading"><b>Python-Module: flames</b> <img src="https://pepy.tech/badge/flames"></img> <b style="float:right">JUN 2017</b></div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2017/flames.png" width=150 height=160> </img> </div>
-			  <div class="col-md-8"> Friends, Love, Affection, Marriage, Enemy, Siblings </div>
+			  <div class="col-md-3"> <img src="static/images/2017/flames.png" width=170 height=160> </img> </div>
+			  <div class="col-md-9 text-justify">
+			      Python module to calculate the FLAMES (Friends, Love, Affection, Marriage, Enemy, Siblings) value between two names.
+				  Display the result with ascii arts.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -277,7 +342,10 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2017/cowsay.png" width=230 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			      Python module for the famous linux command line tool cowsay. Available characters are
+				  beavis, cheese, daemon, cow, dragon, ghostbusters, kitty, meow, milk, pig, stegosaurus, stimpy, turkey, turtle, tux.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -292,7 +360,11 @@
 		  <div class="panel-body">
 		    <div class="row">
 			  <div class="col-md-3"> <img src="static/images/2017/periodicelements.png" width=230 height=130> </img> </div>
-			  <div class="col-md-8"> Desc </div>
+			  <div class="col-md-9 text-justify">
+			    Python Module for the <b>Periodic Table Elements</b>. Access to all element's attributes like Name, Symbol, AtomicNumber, AtomicMass,
+				MeltingPoint, BoilingPoint, Protons_Electrons, Neutrons, Classification, CrystalStructure, Density, Color, Discovery, Uses, ObtainedFrom.
+				Also methods for comparing between two elements and access to all element objects by their Elemental classification.
+			  </div>
 			</div>
 		  </div>
 		  <div class="panel-footer">
@@ -306,11 +378,41 @@
    
    
     <div id="aboutme" hidden>
+	
+	   <div class="row">
+	   
+	       <div class="col-sm-6">
+			  
+ 			    <figure>
+				  <a href="https://www.unb.ca/fredericton/engineering/depts/gge/index.html" target="_blank">
+				      <img src="static/images/AboutMe/unb.jpg" width=150 height=70></img>
+				  <figcaption>Masters of Engineering in Geodesy and Geomatics</a><br>SEP 2018 to DEC 2019</figcaption>
+				</figure> <br>
+				
+				<figure>
+				  <a href="https://www.annauniv.edu/RemoteSensing/" target="_blank">
+				      <img src="static/images/AboutMe/annauniv.png" width=100 height=100> </img>
+				  <figcaption>Bachelors of Engineering in GeoInformatics</a><br>AUG 2014 to JUL 2018</figcaption>
+				</figure> 
+			  
+			   <br>
+			   <h4>Interests</h4>
+			   <img src="static/images/AboutMe/python.png" width=80 height=80 title="Python"></img>
+			   <img src="static/images/AboutMe/linux.png" width=80 height=100 title="Linux"></img>
+			   <img src="static/images/AboutMe/chess.png" width=80 height=80 title="Chess"></img>
+			   
+			  
+		   </div>
+		   
+           <div class="col-sm-6">
+		       <center><h4>Map showing all places mentioned in my Portfolio</h4></center>
+		       <div id="map" style="height:400px"></div>
+			   Click <a onclick="AboutMe()">here</a> to reset this map view <br>
+			   Click <a href="https://vaasudevans.github.io/Maps/" target="_blank">here</a> to see all the map products I have created so far..!!
+		    </div>
+	   
+	   </div>
 
-	    <a href="https://vaasudevans.github.io/Maps/" target="_blank">Here's the list of map products I have created so far..!!</a> <br><br>
-	   <center><h4>Map showing all places mentioned in my Portfolio</h4></center>
-	   <div id="map" style="height:400px"> </div>
-		
     </div>
 
    <script>
@@ -325,7 +427,7 @@
 		 }
 		 $("#AboutMe").addClass("active");
 		 $("#body-content").html($("#aboutme").html());
-		 var map = L.map("map", {minZoom: 2}).setView([35, 9], 2);
+		 var map = L.map("map", {minZoom: 2}).setView([35, 9], 1);
 		 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: "&copy; OSM"}).addTo(map);
 		 L.control.scale().addTo(map);
 		 L.control.mousePosition().addTo(map);
