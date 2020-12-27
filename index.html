@@ -19,16 +19,23 @@
         font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
       }
 	  @media (max-width: 480px){
-      .custom-brand{
+      .custom-brand {
 			float: left;
-			width: 160px;
 			overflow: hidden;
 			clear: left;
 			text-align: right;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-		  }
-		}
+	   }
+	   .alignForMobile {
+		text-align: right;
+		float:right; 
+	   }
+	   .col-md-9{ margin-top: 15px; }
+	}
+	.alignForMobile {
+		float:right; 
+	}
    </style>
 </head>
 
@@ -51,12 +58,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand custom-brand" href="https://vaasudevans.github.io/">Vaasudevan's Portfolio</a>
+				<a id="namePort" class="navbar-brand custom-brand" href="https://vaasudevans.github.io/">Vaasudevan's Portfolio</a>
               </div>
 			  
 			  <div id="navbar" class="navbar-collapse collapse">
 				  <ul class="nav navbar-nav">
-					  <li id="202021"><a onclick="Works(202021)"><b>2020 - 2021</b></a></li>
+					  <li id="202021"><a onclick="Works(202021)"><b>2020 to 2021</b></a></li>
 					  <li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
 					  <li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
 					  <li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
@@ -80,10 +87,23 @@
     <div id="y202021" hidden>
 	
 	    <div class="panel panel-primary">
-		  <div class="panel-heading"><b>Remote Sensing Analyst and Developer at SceneSharp</b> <b style="float:right">MAR 2020 - PRESENT</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					<b>Remote Sensing Analyst and Developer at SceneSharp</b> 
+				  </td>
+				  <td>
+					<b class="alignForMobile">MAR 2020 to PRESENT</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/202021/scenesharp.png" width=240 height=90> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/202021/scenesharp.png" width=240 height=90> </div>
 			  <div class="col-md-9 text-justify">
 			      Automation of various image processing and geoprocessing tasks using python (rasterio, geopandas); development of python scripts to automate Sentinel-2, SAR imageries - batch downloading, preprocessing, cloud masking and mosaicking
 				  Reading remote sensing and deep learning literature papers; implementing and evaluating deep learning models using keras
@@ -100,21 +120,47 @@
 		</div>
 		
 		<div class="panel panel-success">
-		  <div class="panel-heading"><b>[PCAP-31-03] PCAP – Certified Associate in Python Programming issued by Python Institute - 
-		  <a href="https://www.youracclaim.com/badges/37f511f3-96e3-45cc-be8f-44f02e4ab11d" target="_blank">Verify</a>
-		  </b> <b style="float:right">DEC 2020</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					  <b>[PCAP-31-03] PCAP – Certified Associate in Python Programming issued by Python Institute - 
+						<a href="https://www.youracclaim.com/badges/37f511f3-96e3-45cc-be8f-44f02e4ab11d" target="_blank">Verify</a>
+					  </b> 
+				  </td>
+				  <td>
+					<b class="alignForMobile">DEC 2020</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
 		</div>
 		
+	</div>
 	</div>
    
    
     <div id="y2019" hidden>
 	
 	    <div class="panel panel-primary">
-		  <div class="panel-heading"><b>Graduate Student Teaching Assistant for the course GGE3342: Remote Sensing</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					<b>Graduate Student Teaching Assistant for the course GGE3342: Remote Sensing</b> 
+				  </td>
+				  <td>
+					<b class="alignForMobile">FALL 2019 TERM</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/UNBGGE.gif" width=110 height=100> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/UNBGGE.gif" width=110 height=100> </div>
 			  <div class="col-md-9 text-justify">
 			      Prepared the lab materials with the step-by-step screenshots from the Geomatica software; conducted in-person weekly labs to provide support
 				  to the class of 30 for performing lab tasks and assignments; evaluated and handed out assignment reports
@@ -124,10 +170,23 @@
 		</div>
 		
 		<div class="panel panel-primary">
-		  <div class="panel-heading"><b>Cooperative Education work placement at NB Power</b> <b style="float:right">MAY - AUG 2019</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					<b>Cooperative Education work placement at NB Power</b> 
+				  </td>
+				  <td>
+					<b class="alignForMobile">MAY to AUG 2019</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/NBPower.png" width=150 height=70> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/NBPower.png" width=150 height=70> </div>
 			  <div class="col-md-9 text-justify">
 			      Generated network dataset to be used for performing network analysis by integrating New Brunswick road layers from multiple sources using ArcGIS Desktop;
 				  developed arcpy scripts to perform quality check of network dataset’s connectedness
@@ -141,10 +200,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Term-Paper: Land Use Land Cover</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					<b>Term-Paper: Land Use Land Cover</b>
+				  </td>
+				  <td>
+					<b class="alignForMobile">FALL 2019 TERM</b>
+				  </td>
+			  </tr>
+			</tbody> 
+			</table> 
+		</div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/lulc.png" width=140 height=150> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/lulc.png" width=140 height=150> </div>
 			  <div class="col-md-9 text-justify">
 			      Trained a ResNet50 model using EuroSAT dataset and wrote a term paper experimenting various test patch sizes for the model
 			  </div>
@@ -156,10 +228,22 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Project: Indoor Routing Web App</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					<b>Project: Indoor Routing Web App</b> 
+				  </td>
+				  <td>
+					<b class="alignForMobile">FALL 2019 TERM</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table></div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/indoorGIS.png" width=230 height=150> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/indoorGIS.png" width=230 height=150> </div>
 			  <div class="col-md-9 text-justify">
 			      Developed a web app for navigating between the multi-floor rooms for the Head Hall building in the UNB campus using django, geopandas and networkx
 			  </div>
@@ -173,10 +257,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Project: Cholera Spatial Epidemiology</b> <b style="float:right">FALL 2019 TERM</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td> 
+					<b>Project: Cholera Spatial Epidemiology</b> 
+				  </td>
+				  <td>
+				   <b class="alignForMobile">FALL 2019 TERM</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		</div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/cholera.png" width=230 height=150> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/cholera.png" width=230 height=150> </div>
 			  <div class="col-md-9 text-justify">
 			      Developed a webpage from a template to display the results / work done by my UNB colleague Maxwell Kamba
 			  </div>
@@ -188,10 +285,23 @@
 		</div>
 		
 		<div class="panel panel-success">
-		  <div class="panel-heading"><b>Project: Fredericton-KnowYourRoute</b> <b style="float:right">APR 2019</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+					<b>Project: Fredericton-KnowYourRoute</b> 
+				  </td>
+				  <td>
+					<b class="alignForMobile">APR 2019</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/KnowYourRoute.png" width=240 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/KnowYourRoute.png" width=240 height=130> </div>
 			  <div class="col-md-9 text-justify">
 			      <b>Selected by the UNB-GGE Committee for 2019 ESRI Canada GIS Scholarship for this work.</b> <br><br>
 			      <b>Project Description</b>: Web Application that shows the commute route for the user selected points and displays accident statistics
@@ -208,10 +318,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Command Line tool / Python-Module: thirukkural</b> <img src="https://pepy.tech/badge/thirukkural"></img> <b style="float:right">APR 2019</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				   <b>Command Line tool / Python-Module: thirukkural</b> <img src="https://pepy.tech/badge/thirukkural"> 
+				  </td>
+				  <td>
+				  <b class="alignForMobile">APR 2019</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		 </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2019/thirukkural.png" width=240 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2019/thirukkural.png" width=240 height=130> </div>
 			  <div class="col-md-9 text-justify">
 			      Python module / CL tool for the world famous tamil literary work "thirukkural".
 				  Available in Tamil, English and trans-literated English (from Tamil), display a random verse, displaying all the verses in a given chapter.
@@ -231,10 +354,23 @@
     <div id="y2018" hidden>
 		    
 		<div class="panel panel-primary">
-		  <div class="panel-heading"><b>Digital Technician at the University of New Brunswick</b> <b style="float:right">SEP 2018 - MAR 2019</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>Digital Technician at the University of New Brunswick</b> 
+				  </td>
+				  <td>
+				    <b class="alignForMobile">SEP 2018 to MAR 2019</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2018/abdera.png" width=240 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2018/abdera.png" width=240 height=130> </div>
 			  <div class="col-md-9 text-justify"> 
 			      Performed raw terrestrial laser scanning data conversion to LAS format using Faro Scene; developed reports and screenshots
 				  using CloudCompare as required by the supervisor; assisted in creating powerpoints and organising digital files and content
@@ -248,10 +384,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Natural Language Processing Course Work</b> <b style="float:right">FALL 2018 TERM</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>Natural Language Processing Course Work</b> 
+				  </td>
+				  <td>
+				    <b class="alignForMobile">FALL 2018 TERM</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		 </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2018/nlp.png" width=140 height=150> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2018/nlp.png" width=140 height=150> </div>
 			  <div class="col-md-9 text-justify">
 			      Python scripts developed for solving the NLP course assignments and works. All assignments were done only using built-in libraries.
 			  </div>
@@ -263,10 +412,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Project: Site Assessment for Renewable Energy in New Brunswick</b> <b style="float:right">FALL 2018 TERM</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				   <b>Project: Site Assessment for Renewable Energy in New Brunswick</b> 
+				  </td>
+				  <td>
+				   <b class="alignForMobile">FALL 2018 TERM</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		</div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2018/renewsites.png" width=230 height=150> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2018/renewsites.png" width=230 height=150> </div>
 			  <div class="col-md-9 text-justify">
 			      Developed the website that showcases the works done by the team and displays the sites chosen on an interactive map using Leaflet.
 			  </div>
@@ -278,10 +440,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Project: Village Information System</b> <b style="float:right">APR 2018</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>Project: Village Information System</b> 
+				  </td>
+				  <td>
+				    <b class="alignForMobile">APR 2018</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2018/vis.png" width=240 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2018/vis.png" width=240 height=130> </div>
 			  <div class="col-md-9 text-justify">
 			      Django web application to display the GIS data layers for the Agaram Village.
 				  Display the demographics information and display markers for the houses which are eligible for government schemes.
@@ -299,10 +474,23 @@
     <div id="y2017" hidden>
 	
 	    <div class="panel panel-primary">
-		  <div class="panel-heading"><b>GIS Analyst and Developer at kCube Consultancy Services, Chennai-India</b> <b style="float:right">JUL 2017 - FEB 2018</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>GIS Analyst and Developer at kCube Consultancy Services, Chennai-India</b> 
+				  </td>
+				  <td>
+				    <b class="alignForMobile">JUL 2017 to FEB 2018</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2017/kcube.jpg" width=240 height=90> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2017/kcube.jpg" width=240 height=90> </div>
 			  <div class="col-md-9 text-justify">
 			      Development of risk raster models using the spatio-temporal datasets; assisted in spatial data organization and management 
                   Development of python and shell scripts for scheduling, batch processing and workflow automation on the AWS EC2 instances
@@ -316,10 +504,23 @@
 		</div>
 	    
 		<div class="panel panel-primary">
-		  <div class="panel-heading"><b>Indian Academy of Sciences Fellowship at Tezpur University, Assam-India</b> <b style="float:right">MAY - JUN 2017</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>Indian Academy of Sciences Fellowship at Tezpur University, Assam-India</b> 
+				  </td>
+				  <td>
+				    <b class="alignForMobile">MAY to JUN 2017</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		 </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2017/codaqback.png" width=240 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2017/codaqback.png" width=240 height=130> </div>
 			  <div class="col-md-9 text-justify">
 			      Developed a django app to visualize the user uploaded seismic data, perform filtering, compute codaQback and download results
 			  </div>
@@ -332,10 +533,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Python-Module: flames</b> <img src="https://pepy.tech/badge/flames"></img> <b style="float:right">JUN 2017</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>Python-Module: flames</b> <img src="https://pepy.tech/badge/flames">
+				  </td>
+				  <td>
+				    <b class="alignForMobile">JUN 2017</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2017/flames.png" width=170 height=160> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2017/flames.png" width=170 height=160> </div>
 			  <div class="col-md-9 text-justify">
 			      Python module to calculate the FLAMES (Friends, Love, Affection, Marriage, Enemy, Siblings) value between two names.
 				  Display the result with ascii arts.
@@ -350,12 +564,25 @@
 		</div>
 		
 		<div class="panel panel-success">
-		  <div class="panel-heading"><b>Python-Module: cowsay</b> <img src="https://pepy.tech/badge/cowsay"></img> <b style="float:right">MAY 2017</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				    <b>Python-Module: cowsay</b> <img src="https://pepy.tech/badge/cowsay">
+				  </td>
+				  <td>
+				    <b class="alignForMobile">MAY 2017</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		  </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2017/cowsay.png" width=230 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2017/cowsay.png" width=230 height=130> </div>
 			  <div class="col-md-9 text-justify">
-			      Python module for the famous linux command line tool cowsay. Available characters are
+			      Python module for the famous linux command line tool <b>cowsay</b>. Available characters are
 				  beavis, cheese, daemon, cow, dragon, ghostbusters, kitty, meow, milk, pig, stegosaurus, stimpy, turkey, turtle, tux.
 			  </div>
 			</div>
@@ -368,10 +595,23 @@
 		</div>
 		
 		<div class="panel panel-info">
-		  <div class="panel-heading"><b>Python-Module: periodicelements</b> <img src="https://pepy.tech/badge/periodicelements"></img> <b style="float:right">FEB 2017</b></div>
+		  <div class="panel-heading">
+		  <table style="width:100%">
+		  <tbody style="width:100%">
+			  <tr>
+				  <td>
+				     <b>Python-Module: periodicelements</b> <img src="https://pepy.tech/badge/periodicelements">
+				  </td>
+				  <td>
+				     <b class="alignForMobile">FEB 2017</b>
+				  </td>
+			  </tr>
+			  </tbody>
+		  </table>
+		 </div>
 		  <div class="panel-body">
 		    <div class="row">
-			  <div class="col-md-3"> <img src="static/images/2017/periodicelements.png" width=230 height=130> </img> </div>
+			  <div class="col-md-3"> <img src="static/images/2017/periodicelements.png" width=230 height=130> </div>
 			  <div class="col-md-9 text-justify">
 			    Python Module for the <b>Periodic Table Elements</b>. Access to all element's attributes like Name, Symbol, AtomicNumber, AtomicMass,
 				MeltingPoint, BoilingPoint, Protons_Electrons, Neutrons, Classification, CrystalStructure, Density, Color, Discovery, Uses, ObtainedFrom.
@@ -403,15 +643,15 @@
 				
 				<figure>
 				  <a href="https://www.annauniv.edu/RemoteSensing/" target="_blank">
-				      <img src="static/images/AboutMe/annauniv.png" width=100 height=100> </img>
+				      <img src="static/images/AboutMe/annauniv.png" width=100 height=100>
 				  <figcaption>Bachelors of Engineering in GeoInformatics</a><br>AUG 2014 to JUL 2018</figcaption>
 				</figure> 
 			  
 			   <br>
 			   <h4>Interests</h4>
-			   <img src="static/images/AboutMe/python.png" width=80 height=80 title="Python"></img>
-			   <img src="static/images/AboutMe/linux.png" width=80 height=100 title="Linux"></img>
-			   <img src="static/images/AboutMe/chess.png" width=80 height=80 title="Chess"></img>
+			   <img src="static/images/AboutMe/python.png" width=80 height=80 title="Python">
+			   <img src="static/images/AboutMe/linux.png" width=80 height=100 title="Linux">
+			   <img src="static/images/AboutMe/chess.png" width=80 height=80 title="Chess">
 			   
 			  
 		   </div>
@@ -470,7 +710,7 @@
          $("#body-content").html($("#y"+year).html());
       }
       $(function(){Works(202021)});
-	  
+
    </script>
 </body>
 </html>
