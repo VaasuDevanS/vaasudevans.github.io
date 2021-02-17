@@ -31,6 +31,9 @@
 		float:right; 
 	   }
 	   .col-md-9{ margin-top: 15px; }
+	   #linkedin{
+	   margin-bottom: 15px
+	}
 	}
 	.alignForMobile {
 		float:right; 
@@ -46,6 +49,7 @@
     <script src="static/js/leaflet.js"></script>
     <script src="static/js/leaflet.markercluster.js"></script>
     <script src="static/js/leaflet.coordinates.js"></script>
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
     <div class="container" style="padding-top:2px">
         <nav class="navbar navbar-inverse">
@@ -70,7 +74,6 @@
 				  <ul class="nav navbar-nav navbar-right">
 					  <li id="AboutMe"><a onclick="AboutMe()"><b>AboutMe</b></a></li>
 					  <li><a onclick="NewTab('https://www.youracclaim.com/users/vaasudevans')"><b>Badges</b></a></li>
-					  <li><a onclick="NewTab('https://www.linkedin.com/in/VaasuDevanS')"><b>LinkedIn</b></a></li>
 					  <li><a onclick="NewTab('https://scholars.esri.ca/profile/?uid=VaasuS')"><b>Esri-Scholars</b></a></li>
 					  <li><a onclick="NewTab('https://github.com/VaasuDevanS')"><b>Github</b></a></li>
 					  <li><a onclick="NewTab('https://pypi.org/user/vaasus/')"><b>PyPI</b></a></li>
@@ -671,7 +674,7 @@
 				 
 				 <li class="list-group-item">				
 					<div class="row">
-					  <div class="col-md-3"> <img src="static/images/AboutMe/annauniv.png" width=80 height=80> </div>
+					  <div class="col-md-3"> <img src="static/images/AboutMe/annauniv.png" width=79 height=79> </div>
 					  <div class="col-md-9">
 						<a href="https://www.annauniv.edu/RemoteSensing/" target="_blank">
 						    Bachelors of Engineering in GeoInformatics</a><br>Aug 2014 to Jul 2018
@@ -681,22 +684,30 @@
  
 			   </ul>
 
-			   <ul class="list-group">
-				  <li class="list-group-item active">Interests</li>
-				  <li class="list-group-item">Geospatial Analysis and Development, ArcGIS</li>
-				  <li class="list-group-item">Machine Learning, Data Analytics</li>
-				  <li class="list-group-item">Python</li>
-				  <li class="list-group-item">Linux, FOSS</li>
-				  <li class="list-group-item">Chess</li>
-			   </ul>	   
-			  
+			   <div class="row">
+			     <div class="col-md-6">
+				 <div id="linkedin">
+				   <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="vaasudevans"><a class="LI-simple-link" href='https://ca.linkedin.com/in/vaasudevans?trk=profile-badge'>Vaasudevan Srinivasan</a></div>
+				 </div>
+				 </div>
+			     <div class="col-md-6">
+				   <ul class="list-group">
+					  <li class="list-group-item active" style="padding: 6px 15px">Interests</li>
+					  <li class="list-group-item" style="padding: 11px 15px">Geospatial Analysis and Development, ArcGIS</li>
+					  <li class="list-group-item">Python, Machine Learning, Data Analytics</li>
+					  <li class="list-group-item">Linux, FOSS</li>
+					  <li class="list-group-item">Chess</li>
+			     </ul>
+				 </div>
+				</div>
+			   
 		   </div>
 		   
            <div class="col-sm-6">
 		       <ul class="list-group">
 				  <li class="list-group-item list-group-item-info">Map showing all places mentioned in my Portfolio</li>
 				  <li class="list-group-item">
-				    <div id="map" style="height:360px"></div>
+				    <div id="map" style="height:349px"></div>
 					Click <a onclick="AboutMe()">here</a> to reset this map view <br>
 				  </li>
 			      <li class="list-group-item">
