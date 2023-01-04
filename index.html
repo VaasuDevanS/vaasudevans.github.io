@@ -73,7 +73,7 @@
 			  
 			  <div id="navbar" class="navbar-collapse collapse">
 				  <ul class="nav navbar-nav">
-					  <li id="202022"><a onclick="Works(202022)"><b>2020 - 2022</b></a></li>
+					  <li id="202023"><a onclick="Works(202023)"><b>2020 - 2023</b></a></li>
 					  <li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
 					  <li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
 					  <li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
@@ -95,7 +95,7 @@
 				
     </div>
    
-    <div id="y202022" hidden>
+    <div id="y202023" hidden>
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -763,13 +763,13 @@
       }
 	  
       function Works(year) {
-         for (const val of ["#202022", "#2019", "#2018", "#2017", "#AboutMe"]) {
+         for (const val of ["#202023", "#2019", "#2018", "#2017", "#AboutMe"]) {
 		     $(val).removeClass("active");
 		 }
 		 $("#"+year).addClass("active");
          $("#body-content").html($("#y"+year).html());
       }
-      $(function(){Works(202022)});
+      $(function(){Works(202023)});
 
    </script>
 </body>
