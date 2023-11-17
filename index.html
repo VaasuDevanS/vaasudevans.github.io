@@ -90,7 +90,7 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li id="202023"><a onclick="Works(202023)"><b>2020 - 2023</b></a></li>
+						<li id="202024"><a onclick="Works(202024)"><b>2020 - 2024</b></a></li>
 						<li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
 						<li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
 						<li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
@@ -118,7 +118,7 @@
 
 	</div>
 
-	<div id="y202023" hidden>
+	<div id="y202024" hidden>
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -160,6 +160,27 @@
 			</div>
 			<div class="panel-footer">
 				<a href="https://scenesharp.com/" target="_blank">Visit Company Website</a>
+			</div>
+		</div>
+
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<table style="width:100%">
+					<tbody style="width:100%">
+						<tr>
+							<td>
+								<b>🔥 <a href="https://learn.365datascience.com/career-tracks/data-analyst/"
+										target="_blank">[365 Data Science]</a> Data Analyst Career Track -
+									<a href="https://learn.365datascience.com/c/629f1f2db3/"
+										target="_blank">Verify</a>
+								</b>
+							</td>
+							<td>
+								<b class="alignForMobile">NOV 2023</b>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 
@@ -808,7 +829,7 @@
 		}
 
 		function AboutMe() {
-			for (const val of ["#202023", "#2019", "#2018", "#2017", "#AboutMe"]) {
+			for (const val of ["#202024", "#2019", "#2018", "#2017", "#AboutMe"]) {
 				$(val).removeClass("active");
 			}
 			$("#AboutMe").addClass("active");
@@ -837,13 +858,13 @@
 		}
 
 		function Works(year) {
-			for (const val of ["#202023", "#2019", "#2018", "#2017", "#AboutMe"]) {
+			for (const val of ["#202024", "#2019", "#2018", "#2017", "#AboutMe"]) {
 				$(val).removeClass("active");
 			}
 			$("#" + year).addClass("active");
 			$("#body-content").html($("#y" + year).html());
 		}
-		$(function () { Works(202023) });
+		$(function () { Works(202024) });
 
 	</script>
 </body>
