@@ -90,7 +90,7 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li id="202025"><a onclick="Works(202025)"><b>2020 - 2025</b></a></li>
+						<li id="202026"><a onclick="Works(202026)"><b>2020 - 2026</b></a></li>
 						<li id="2019"><a onclick="Works(2019)"><b>2019</b></a></li>
 						<li id="2018"><a onclick="Works(2018)"><b>2018</b></a></li>
 						<li id="2017"><a onclick="Works(2017)"><b>2017</b></a></li>
@@ -118,7 +118,7 @@
 
 	</div>
 
-	<div id="y202025" hidden>
+	<div id="y202026" hidden>
 
 		<div class="panel panel-primary">
 			<div class="panel-heading">
@@ -140,25 +140,26 @@
 					<div class="col-md-3"> <img src="static/images/2020XX/Dillon-Ruffle-Animation-ezgif.com-crop.gif"
 							width=200 height=120> </div>
 					<div class="col-md-9 text-justify">
-						Automating complete geospatial workflows and building command line tools using Python (open
-						source libraries, ArcGIS API for python and arcpy), reducing manual processing time from several
-						hours to minutes, and generating standalone dynamic HTML reports and interactive maps.
-						Developing end-to-end ML pipelines for diverse tasks leveraging satellite and drone imagery.
-						Streamlining data analysis and preprocessing by automating tasks through ESdat's OData Feeds.
-						Contributing to technical workflow documentation and proposal development, including effort
-						estimation and budgeting, helping tailor the solutions to meet client needs and industry
-						standards.
-						Automating workflows with ArcGIS API for Python and Arcpy to publish layers and services to the
-						ArcGIS Enterprise portal, ensuring accurate and consistent data management.
-						Providing technical support to GIS components for both internal and external projects including
-						data management, spatial analysis, and visualizations, utilizing various GIS tools and
-						softwares.
-						Conducting comprehensive research and assessing a range of GIS software solutions to enhance and
-						manage existing systems and drive innovation in technical systems and applications.
-						Collaborating closely with multidisciplinary project teams, including planners and engineers, to
-						integrate GIS solutions into larger project frameworks.
-						Contributing to the development and continuous improvement of innovative technical systems,
-						standards, and procedures, ensuring high efficiency and maintaining quality in all deliverables.
+						Developed complete end-to-end Python tools with web user interfaces, command-line applications
+						(open-source libraries, ArcGIS API for Python, and ArcPy) to automate complex geospatial
+						workflows, reducing manual processing time from several hours to few minutes.
+						Spearheaded internal technical presentations across the practices to demonstrate the
+						capabilities of custom automation tools, Python, GDAL, and open-source software, fostering a
+						culture of continuous learning, and mentoring team members on advanced GIS capabilities.
+						Engineered automated data pipelines to streamline data analysis and preprocessing via OData
+						Feeds and APIs, successfully transforming historical data and diverse file formats (e.g., PDFs,
+						Excel) into standardized, usable databases while maintaining strict quality assurance.
+						Programmed dynamic GIS solutions and reporting systems that instantly generate standalone HTML
+						reports, static cartographic products, and interactive web dashboards, enabling
+						multi-disciplinary teams to easily visualize and interpret large spatial datasets.
+						Built end-to-end machine learning pipelines to process massive datasets, including aerial,
+						satellite, and drone imagery, completely automating the extraction of spatial insights.
+						Collaborated closely with multi-disciplinary project teams (including planners and engineers) to
+						design geospatial strategies, actively contributing to technical workflow documentation, project
+						proposals, effort estimation, and budgeting to align custom solutions with client goals.
+						Provided comprehensive technical support and served as a key GIS contributor on complex
+						projects, offering expertise in spatial analysis, desktop GIS workflows, and rigorous QA/QC
+						procedures to ensure all technical deliverables met industry standards.
 					</div>
 				</div>
 			</div>
@@ -195,7 +196,7 @@
 				</div>
 			</div>
 			<div class="panel-footer">
-				<a href="https://www.stratagemgis.com" target="_blank">Visit Website</a>
+				<a href="https://stratagemgis.github.io" target="_blank">Visit Website</a>
 			</div>
 		</div>
 
@@ -378,9 +379,6 @@
 						Brunswick from multiple sources using ArcGIS Desktop.
 						Developed ArcPy scripts to conduct QA/QC and verify the connectedness of the network dataset.
 						Created an ArcPy workflow to merge layers and tables using attribute and spatial relationships.
-						Prepared and presented analysis results and provided daily status reports to the manager.
-						Demonstrated flexibility by consistently meeting tight deadlines, effectively organizing, and
-						prioritizing allocated tasks.
 					</div>
 				</div>
 			</div>
@@ -919,7 +917,7 @@
 		}
 
 		function AboutMe() {
-			for (const val of ["#202025", "#2019", "#2018", "#2017", "#AboutMe"]) {
+			for (const val of ["#202026", "#2019", "#2018", "#2017", "#AboutMe"]) {
 				$(val).removeClass("active");
 			}
 			$("#AboutMe").addClass("active");
@@ -949,13 +947,13 @@
 		}
 
 		function Works(year) {
-			for (const val of ["#202025", "#2019", "#2018", "#2017", "#AboutMe"]) {
+			for (const val of ["#202026", "#2019", "#2018", "#2017", "#AboutMe"]) {
 				$(val).removeClass("active");
 			}
 			$("#" + year).addClass("active");
 			$("#body-content").html($("#y" + year).html());
 		}
-		$(function () { Works(202025) });
+		$(function () { Works(202026) });
 
 	</script>
 </body>
